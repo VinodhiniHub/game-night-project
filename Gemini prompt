@@ -1,0 +1,80 @@
+Create a premium Snake and Ladder style game called "Roll & Rise" using HTML, CSS, and JavaScript with Canvas.
+STRICT RULE (VERY IMPORTANT):
+
+Title: "Roll & Rise"
+Small quote below title (e.g., "Climb High, Avoid the Fall")
+Start button design and layout
+Colors and animations of start screen
+ONLY improve the GAME BOARD and GAMEPLAY.
+GAME MUST INCLUDE BOTH:
+At least 6 SNAKES (head → tail)
+At least 6 LADDERS (bottom → top)
+
+IMPORTANT:
+Ladders must be clearly visible (wood style with steps).
+Snakes must be curved with head and tail.
+DO NOT miss ladders (this is mandatory).
+BOARD SIZE FIX (CRITICAL):
+Board must be BIG and take maximum screen space.
+Entire board must be visible (no cutting).
+Use this exact logic:
+const controls = document.querySelector(".controls");
+const controlHeight = controls ? controls.offsetHeight : 150;
+const availableHeight = window.innerHeight - controlHeight - 20;
+const availableWidth = window.innerWidth * 0.95;
+const size = Math.min(availableWidth, availableHeight);
+canvas.width = size;
+canvas.height = size;
+BOARD DESIGN (CLEAR & ATTRACTIVE):
+Perfect 10x10 square grid.
+Use bright pastel colors:
+Light green (#dff5e1)
+Light cream (#fff6d6)
+Bold, large numbers (1–100).
+Strong borders between tiles.
+Board must look like a real game.
+GAME VISIBILITY:
+Board must NOT be small.
+Board must NOT be hidden behind UI.
+Board must be centered and clearly visible.
+TOKENS:
+Player 1: Red token
+Player 2: Blue token
+Large size and clearly visible
+Smooth step-by-step movement
+DICE (WITH SOUND):
+Show real dice face
+Add rolling animation
+Add sound:
+const diceSound = new Audio("dice.mp3");
+rollButton.addEventListener("click", () => {
+diceSound.currentTime = 0;
+diceSound.play();
+});
+GAME LOGIC (CORRECT):
+Move step-by-step
+Apply:
+Ladder → go UP
+Snake → go DOWN
+Show messages:
+"Climbed a Ladder!"
+"Snake Bite!"
+Exact number required to reach 100
+NO ERRORS / NO MISSING FEATURES:
+Must include BOTH snakes and ladders
+Must NOT skip ladders
+Must NOT break layout
+Must NOT make board small
+FINAL RESULT MUST BE:
+✔ SAME start interface (unchanged)
+✔ Small quote below title (visible)
+✔ BIG board (not small)
+✔ FULLY visible game
+✔ Snakes + Ladders working
+✔ Dice sound working
+✔ Smooth gameplay
+✔ Attractive design
+OUTPUT:
+Provide full working code in ONE HTML file.
+No errors.
+Runs instantly in browser.
